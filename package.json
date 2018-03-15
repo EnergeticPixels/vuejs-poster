@@ -1,17 +1,31 @@
 {
   "name": "vuejs-poster-shop",
-  "version": "1.0.0",
-  "description": "Ultimate Vue.js Developers Course",
+  "version": "0.0.5",
+  "description": "udemy vuejs training from Anthony Gore.  Poster Shop project",
+  "keywords": [
+    "tutorial",
+    "vuejs",
+    "axios",
+    "udemy",
+    "Anthony Gore"
+  ],
+  "engines": {
+    "node": "4.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css"
   },
-  "author": "Anthony Gore <info@getjsdojo.com>",
+  "author": "Anthony Jackman <energeticpixels@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vuejsdevelopers/vuejs-poster-shop"
+    "url": "https://github.com/EnergeticPixels/vuejs-poster"
   },
-  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/EnergeticPixels/vuejs-poster/issues"
+  },
+  "homepage": "https://github.com/EnergeticPixels/vuejs-poster#readme",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.15.2",
     "body-parser": "^1.15.2",
