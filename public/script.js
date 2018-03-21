@@ -36,6 +36,12 @@ new Vue({
                 });
             }
             
+        },
+        inc: function(item) {
+
+        },
+        dec: function(item) {
+            
         }
     },
     filters: {
