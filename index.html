@@ -21,9 +21,9 @@
     </div>
     <div class="main">
         <div class="products">
-            <div class='product' v-for="item in items">
+            <div class='product' v-for="(item, index) in items">
                 <h4 class='product-title'>{{ item.title }}</h4>
-                <button class='add-to-cart' v-on:click='addItem'>Add to cart</button>
+                <button class='add-to-cart' v-on:click='addItem(index)'>Add to cart</button>
             </div>
             
         </div>
