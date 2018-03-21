@@ -1,3 +1,5 @@
+### this is the result of a follow-along course from Udemy.com. Below is Mr. Gore's original readme contents.
+
 # Ultimate Vue.js Developers Course
 
 Source code for the [Ultimate Vue.js Developers Course](http://bit.ly/2mPK8ny).
