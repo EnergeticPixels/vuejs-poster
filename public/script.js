@@ -17,7 +17,7 @@ new Vue({
     },
     methods: {
         onSubmit: function() {
-            
+            console.log(this.$http);
         },
         addItem: function(index) {
             //console.log('addItem')
