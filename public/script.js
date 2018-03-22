@@ -9,7 +9,8 @@ new Vue({
         cart: [],
         newSearch: 'anime',
         lastSearch: '',
-        loading: false
+        loading: false,
+        price: PRICE
     },
     methods: {
         onSubmit: function() {
