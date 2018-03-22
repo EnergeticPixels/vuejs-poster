@@ -15,6 +15,9 @@ new Vue({
         ]
     },
     methods: {
+        onSubmit: function() {
+            
+        },
         addItem: function(index) {
             //console.log('addItem')
             //console.log(index);
