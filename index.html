@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h4 class='product-title'>{{ item.title }}</h4>
-                    <p>Price: <strong>{{ item.price | currency }}</strong></p>
+                    <p>Price: <strong>{{ price | currency }}</strong></p>
                     <button class='add-to-cart btn' v-on:click='addItem(index)'>Add to cart</button>
                 </div>
             </div>

@@ -67,7 +67,7 @@ new Vue({
     },
     filters: {
         currency: function(price) {
-            return '$ '.concat(price.toFixed(2));
+            return '$ '.concat(parseFloat(Math.round(price * 100) / 100));
         }
     },
     mounted: function() {
