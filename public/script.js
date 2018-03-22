@@ -12,7 +12,8 @@ new Vue({
         ],
         cart: [
 
-        ]
+        ],
+        search: ''
     },
     methods: {
         onSubmit: function() {
