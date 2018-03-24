@@ -22,7 +22,6 @@ new Vue({
     },
     // methods are not reactive by default!!!
     methods: {
-        
         appendItems: function() {
             //console.log('bottom of list');
             if (this.items.length < this.results.length) {
@@ -31,17 +30,19 @@ new Vue({
             }
         },
         onSubmit: function() {
-            this.items = [];
-            this.loading = true;
-            this.$http
-                .get('/search/'.concat(this.newSearch))
-                .then(function(res) {
-                    //console.log(res);
-                    this.lastSearch = this.newSearch;
-                    this.results = res.data;
-                    this.appendItems();
-                    this.loading = false;
-                });
+            if (this.newSearch.length) {
+                this.items = [];
+                this.loading = true;
+                this.$http
+                    .get('/search/'.concat(this.newSearch))
+                    .then(function(res) {
+                        //console.log(res);
+                        this.lastSearch = this.newSearch;
+                        this.results = res.data;
+                        this.appendItems();
+                        this.loading = false;
+                    });
+            }
         },
         addItem: function(index) {
             //console.log('addItem')
