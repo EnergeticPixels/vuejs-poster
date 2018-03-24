@@ -76,4 +76,10 @@ new Vue({
     mounted: function() {
         this.onSubmit();
     }
-})
+});
+
+var elem = document.getElementById('product-list-bottom');
+var watcher = scrollMonitor.create(elem);
+watcher.enterViewport(function() {
+    console.log('entered viewport');
+});
