@@ -1,4 +1,5 @@
-### this is the result of a follow-along course from Udemy.com. Below is Mr. Gore's original readme contents.
+### Poster Store
+this is the result of a follow-along course from Udemy.com. Below is Mr. Gore's original readme contents.
 
 # Ultimate Vue.js Developers Course
 
