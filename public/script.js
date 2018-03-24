@@ -15,6 +15,9 @@ new Vue({
         price: PRICE
     },
     methods: {
+        appendItems: function() {
+            console.log('bottom of list');
+        },
         onSubmit: function() {
             this.items = [];
             this.loading = true;
@@ -75,11 +78,14 @@ new Vue({
     },
     mounted: function() {
         this.onSubmit();
-    }
-});
 
-var elem = document.getElementById('product-list-bottom');
-var watcher = scrollMonitor.create(elem);
-watcher.enterViewport(function() {
-    console.log('entered viewport');
+        // vueInstance below is a way of getting non-vue coding to be seen by Vue
+        var vueInstance = this;
+        var elem = document.getElementById('product-list-bottom');
+        var watcher = scrollMonitor.create(elem);
+        watcher.enterViewport(function() {
+            // this gets around the normal vue "this.xxxxxx"
+            vueInstance.appendItems();
+        });
+    }
 });
