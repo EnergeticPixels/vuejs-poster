@@ -14,7 +14,15 @@ new Vue({
         loading: false,
         price: PRICE
     },
+    computed: {
+        noMoreItems: function() {
+            // vue watches all these properties and when the expression is true recomputes the return
+            return this.items.length === this.results.length && this.results.length > 0;
+        }
+    },
+    // methods are not reactive by default!!!
     methods: {
+        
         appendItems: function() {
             //console.log('bottom of list');
             if (this.items.length < this.results.length) {
