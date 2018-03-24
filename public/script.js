@@ -1,5 +1,6 @@
 //console.log(Vue);
 var PRICE = 9.99;
+var LOAD_NUM = 10;
 
 new Vue({
     el: '#app',
@@ -7,6 +8,7 @@ new Vue({
         total: 0,
         items: [],
         cart: [],
+        results: [],
         newSearch: 'anime',
         lastSearch: '',
         loading: false,
@@ -21,7 +23,8 @@ new Vue({
                 .then(function(res) {
                     //console.log(res);
                     this.lastSearch = this.newSearch;
-                    this.items = res.data;
+                    this.results = res.data;
+                    this.items = res.data.slice(0, LOAD_NUM);
                     this.loading = false;
                 });
         },
